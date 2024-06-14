@@ -1,0 +1,52 @@
+Question 2 (Fibonacci): 4613732
+print_fibonacci <- function(n) {
++     a <- 0
++     b <- 1
++     cat("Fibonacci Sequence:")
++     for (i in 1:n) {
++         cat(a, " ")
++         next_num <- a + b
++         a <- b
++         b <- next_num
++     }
++ }
+> print_fibonacci(20)
+Fibonacci Sequence:0  1  1  2  3  5  8  13  21  34  55  89  144  233  377  610  987  1597  2584  4181  
+> 
+> print_fibonacci(40)
+
+
+Question 3 (Prime Factors): 6857
+ prime_factors <- function(n) {
++     factors <- vector("numeric")
++     d <- 2
++     while (n > 1) {
++         while (n %% d == 0) {
++             factors <- c(factors, d)
++             n <- n / d
++         }
++         d <- d + 1
++         if (d * d > n) {
++             if (n > 1) {
++                 factors <- c(factors, n)
++                 break
++             }
++         }
++     }
++     return(factors)
++ }
+
+
+Question 1 (Multiples): 267333
+x <- 1:1000
+> multiples_of_3 <- x[x %% 3 == 0]
+> multiples_of_5 <- x[x %% 5 == 0]
+> multiples_of_3
+ sum(multiples_of_3)
+[1] 166833
+> sum(multiples_of_5)
+[1] 100500
+> 100500 + 166833
+[1] 267333
+> 
+
