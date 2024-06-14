@@ -1,0 +1,5 @@
+nums <- runif(n=20, min=1, max=50)
+> hist(nums, main = 'Random Number Generator Distribution 2', xlab = 'x-axis', ylab = 'y-axis')
+
+# iterated for different distributions
+
