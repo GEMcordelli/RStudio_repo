@@ -1,0 +1,4 @@
+CPU_cores <- data$CPU.Number.of.Cores..int.
+
+
+hist(CPU_cores, main = "Prevalence of Different Number of CPU Cores Amongst MSDS 2024 Cohort", xlab = 'Number of Cores', ylab = 'Frequency', col = "green4")
